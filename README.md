@@ -46,43 +46,6 @@ Reference: [Site UI flow](http://dfa-minimizer.aliasghardev.ir/)
 
 ---
 
-## Related Project: Weather App
-
-Live Demo: [weatherapp.aliasghardev.ir](https://weatherapp.aliasghardev.ir)
-
-A responsive weather forecast app with real-time data using the OpenWeather API. It fully supports search by city name and works reliably across networks in Iran via a Cloudflare backend proxy that hides the API key.
-
-### Technologies Used
-- **HTML**
-- **CSS (Tailwind)**
-- **JavaScript**
-- **Cloudflare Workers**
-
-### Backend Security
-To avoid exposing the API key and to ensure compatibility across ISPs in Iran, a Cloudflare Worker is used to:
-- Hide the OpenWeather API key
-- Prevent direct client-side requests (which may be blocked or rate-limited)
-- Format data to match frontend expectations (`res.json()`)
-
-### Features
-- Search by city name
-- Real-time weather data
-- Backend proxy (Cloudflare Worker)
-- Secure API access
-- Clean UI and responsive layout
-
-### Preview
-![weatherapp](https://github.com/user-attachments/assets/3379953f-50e8-4665-a98d-7a4f0871c93a)
-
-### Contact
-- LinkedIn: [Aliasghar Hasanzadeh](https://www.linkedin.com/in/aliasghar-hasanzadeh/)
-- Instagram: [@aliasghar.dev](https://www.instagram.com/aliasghar.dev?igsh=cmg5ZnJvMDMxODdu)
-- CodePen: [Aliasghar-Hasanzadeh](https://codepen.io/Aliasghar-Hasanzadeh)
-
-> Note: This app uses the free tier of OpenWeather, so data limits may apply. You can upgrade the API plan or change the source if needed.
-
----
-
 ## References
 - DFA Minimizer UI: [dfa-minimizer.aliasghardev.ir](http://dfa-minimizer.aliasghardev.ir/)
 
