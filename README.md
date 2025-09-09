@@ -2,8 +2,8 @@
 
 Interactive tool to build and minimize Deterministic Finite Automata (DFA). You can add states and transitions, choose the start state and final states, and compute the minimized DFA. Designed for students, instructors, and enthusiasts of automata theory.
 
-Demo: [dfa-minimizer.aliasghardev.ir](http://dfa-minimizer.aliasghardev.ir/)  
-Reference: [Site UI flow](http://dfa-minimizer.aliasghardev.ir/)
+🚀[Live Demo](http://dfa-minimizer.aliasghardev.ir/)  
+
 
 ### Technologies
 - **HTML**
@@ -43,10 +43,5 @@ Reference: [Site UI flow](http://dfa-minimizer.aliasghardev.ir/)
 - LinkedIn: [Aliasghar Hasanzadeh](https://www.linkedin.com/in/aliasghar-hasanzadeh/)
 - Instagram: [@aliasghar.dev](https://www.instagram.com/aliasghar.dev?igsh=cmg5ZnJvMDMxODdu)
 - CodePen: [Aliasghar-Hasanzadeh](https://codepen.io/Aliasghar-Hasanzadeh)
-
----
-
-## References
-- DFA Minimizer UI: [dfa-minimizer.aliasghardev.ir](http://dfa-minimizer.aliasghardev.ir/)
 
 
