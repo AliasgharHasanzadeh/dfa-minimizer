@@ -41,7 +41,5 @@ Interactive tool to build and minimize Deterministic Finite Automata (DFA). You 
 
 ### Contact
 - LinkedIn: [Aliasghar Hasanzadeh](https://www.linkedin.com/in/aliasghar-hasanzadeh/)
-- Instagram: [@aliasghar.dev](https://www.instagram.com/aliasghar.dev?igsh=cmg5ZnJvMDMxODdu)
-- CodePen: [Aliasghar-Hasanzadeh](https://codepen.io/Aliasghar-Hasanzadeh)
 
 
