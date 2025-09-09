@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <title>DFA TO MIN-DFA</title>
+  </head>
+  <body class="flex justify-center flex-wrap w-full min-h-[100vh] bg-[#212529] text-[#f8f9fa] p-4">
+    <!-- enter data to calculate -->
+    <main class="w-[500px] flex flex-col  flex-wrap gap-6">
+      <!-- transition -->
+      <div class="overflow-hidden w-[450px] flex flex-col items-center bg-[#343a40] p-4 rounded-2xl shadow-md">
+        <div class="w-full flex">
+          <input
+            id="inpTrans"
+            class="bg-[#2b3035] text-[#f8f9fa] px-3 py-2 w-full h-[40px] outline-none rounded-l-xl focus:ring-2 focus:ring-[#4dabf7]"
+            type="text"
+            placeholder="Add Transition"
+          />
+          <button
+            id="btn-add-trans"
+            class="bg-[#4dabf7] text-[#212529] font-medium px-4 cursor-pointer h-[40px] rounded-r-xl hover:bg-[#339af0] transition"
+          >
+            Add
+          </button>
+          
+        </div>
+        <ul
+          id="trans"
+          class="pt-4 w-full max-w-[450px] px-2 *:w-full *:bg-[#2b3035] *:mb-2 *:text-[#dee2e6] *:px-3 *:py-2 *:rounded-lg *:flex *:justify-between *:items-center *:gap-2"
+        ></ul>
+      </div>
+
+      <!-- alphabet -->
+      <div class="w-[450px] flex flex-col items-center bg-[#343a40] p-4 rounded-2xl shadow-md">
+        <div class="w-full flex">
+          <input
+            id="inpAlphabets"
+            class="bg-[#2b3035] text-[#f8f9fa] px-3 py-2 w-full h-[40px] outline-none rounded-l-xl focus:ring-2 focus:ring-[#4dabf7]"
+            type="text"
+            placeholder="Add Alphabet"
+          />
+          <button
+            id="btn-add-alphabet"
+            class="bg-[#4dabf7] text-[#212529] font-medium px-4 cursor-pointer h-[40px] rounded-r-xl hover:bg-[#339af0] transition"
+          >
+            Add
+          </button>
+        </div>
+        <ul
+          id="alphabets"
+          class="pt-3 w-full max-w-[450px] px-2 *:w-full *:bg-[#2b3035] *:mb-2 *:text-[#dee2e6] *:px-3 *:py-2 *:rounded-lg *:flex *:justify-between *:items-center *:gap-2"
+        ></ul>
+      </div>
+
+      <!-- states -->
+      <div class="w-[450px] flex flex-col items-center bg-[#343a40] p-4 rounded-2xl shadow-md">
+        <div class="w-full flex">
+          <input
+            id="inpStates"
+            class="bg-[#2b3035] text-[#f8f9fa] px-3 py-2 w-full h-[40px] outline-none rounded-l-xl focus:ring-2 focus:ring-[#4dabf7]"
+            type="text"
+            placeholder="Add State"
+          />
+          <button
+            id="btn-add-state"
+            class="bg-[#4dabf7] text-[#212529] font-medium px-4 cursor-pointer h-[40px] rounded-r-xl hover:bg-[#339af0] transition"
+          >
+            Add
+          </button>
+        </div>
+        <ul
+          id="states"
+          class="pt-3 w-full max-w-[450px] px-2 *:w-full *:bg-[#2b3035] *:mb-2 *:text-[#dee2e6] *:px-3 *:py-2 *:rounded-lg *:flex *:justify-between *:items-center *:gap-2"
+        ></ul>
+      </div>
+
+      <!-- start state -->
+      <div class="w-[450px] flex items-center gap-4 bg-[#343a40] p-4 rounded-2xl shadow-md">
+        <label for="startState" class="text-[#f1f3f5] font-medium whitespace-nowrap">
+          Choose the start state
+        </label>
+        <select
+          id="startState"
+          class="flex-1 border border-[#495057] bg-[#2b3035] text-[#f8f9fa] px-3 py-2 rounded-lg outline-none focus:ring-2 focus:ring-[#4dabf7] hover:border-[#4dabf7] cursor-pointer"
+        >
+          <option value="" disabled selected class="text-[#868e96]">
+            select the state
+          </option>
+          
+        </select>
+      </div>
+
+      <!-- final state -->
+      <div class="w-[450px] flex items-center gap-4 bg-[#343a40] p-4 rounded-2xl shadow-md">
+        <label for="startState" class="text-[#f1f3f5] font-medium whitespace-nowrap">
+          Choose the Final States
+        </label>
+        <select
+          id="finalStates" multiple
+          class="flex-1 border border-[#495057] bg-[#2b3035] text-[#f8f9fa] px-3 py-2 rounded-lg outline-none focus:ring-2 focus:ring-[#4dabf7] hover:border-[#4dabf7] cursor-pointer"
+        >  
+        </select>
+      </div>
+      <!-- calculate button! -->
+       
+        <button
+            id="btn-calc"
+            class="bg-[#4dabf7] text-[#212529] font-medium px-4 cursor-pointer h-[40px] rounded-xl hover:bg-[#339af0] transition"
+          >
+          calculate MIN-DFA
+          </button>
+      
+    </main>
+    <!--automate graph-->
+    <div class="w-[600px] flex flex-col gap-6">
+      <div class="flex justify-center items-center flex-col bg-[#343a40] p-4 rounded-2xl shadow-md">
+        <h1>Input DFA</h1>
+        <div id="inputDFA" class="w-[600px] h-[400px] "></div>
+      </div>
+      <div class="flex justify-center items-center flex-col bg-[#343a40] p-4 rounded-2xl shadow-md">
+        <h1>Minimized DFA</h1>
+        <div id="outputDFA" class="w-[600px] h-[400px] "></div>
+      </div>
+    </div>
+    <script src="script/alghortim.js"></script>
+    <script src="script/logic.js"></script>
+  </body>
+</html>
